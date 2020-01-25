@@ -9,7 +9,8 @@ import org.springframework.stereotype.Component;
 @Log
 public class Consummer {
 
-	@JmsListener(destination = "${jms.queue.destination}")
+
+	@JmsListener(destination = "${spring.jms.topic.a}")
 	public void receive(Message message){
 		log.info(">>>>>>>>>>>> Received Message: " + message.getPayload().toString());
 	}

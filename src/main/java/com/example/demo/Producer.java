@@ -11,11 +11,11 @@ public class Producer {
 	@Autowired
 	JmsTemplate jmsTemplate;
 
-	@Value("${jms.queue.destination}")
-	String destinationQueue;
+	@Value("${spring.jms.topic.a}")
+	String topica;
 
 	public void send(String msg){
-		jmsTemplate.convertAndSend(destinationQueue, msg);
+		jmsTemplate.convertAndSend(topica, msg);
 	}
 
 }

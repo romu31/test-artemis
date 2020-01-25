@@ -11,6 +11,8 @@ public class RestApiController {
 	@Autowired
 	Producer producer;
 
+
+
 	@GetMapping(value="/produce")
 	public String produce(@RequestParam("msg")String msg){
 		producer.send(msg);
