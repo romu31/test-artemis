@@ -15,6 +15,7 @@ public class Producer {
 	String topica;
 
 	public void send(String msg){
+		jmsTemplate.setPubSubDomain(true);
 		jmsTemplate.convertAndSend(topica, msg);
 	}
 
