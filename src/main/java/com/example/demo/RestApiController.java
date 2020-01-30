@@ -19,4 +19,11 @@ public class RestApiController {
 		return "Done";
 	}
 
+	@GetMapping(value="/createL")
+	public String createListener(@RequestParam("topicId")String topicId){
+
+		return "Done";
+	}
+
+
 }
